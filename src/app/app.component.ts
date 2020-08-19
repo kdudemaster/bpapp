@@ -24,10 +24,14 @@ export class AppComponent implements OnInit{
   }
 
   submit(content){
+    console.log("name")
+    console.log(this.name)
     localStorage.setItem("name", this.name);
     localStorage.setItem("passcode", this.passcode);
     localStorage.setItem("newUser", "true");
     document.getElementById("closeModal").click();
+    console.log("loopFlag")
+    console.log(localStorage.getItem("name"))
     if(localStorage.getItem("name") == "Pat"){
       this.loopFlag = true;
     }
