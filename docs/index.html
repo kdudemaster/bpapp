@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JS Bachelor Party</title>
+  <base href="/jsbp/">  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.823b338b193fbba88157.css"></head>
+<body>
+
+  <app-root></app-root>
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCNfAW4rS7TDsgA2q4vi6ohjy-zPab-sMk",
+    authDomain: "jsbp-dbaf0.firebaseapp.com",
+    databaseURL: "https://jsbp-dbaf0.firebaseio.com",
+    projectId: "jsbp-dbaf0",
+    storageBucket: "jsbp-dbaf0.appspot.com",
+    messagingSenderId: "814811310784",
+    appId: "1:814811310784:web:06c7ffc070cb82d4d25b25"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var db = firebase.firestore();
+</script>
+<script>
+function openModal() {
+        $('#exampleModal').modal('show');
+    }
+</script>
+
+  <script src="runtime.e227d1a0e31cbccbf8ec.js" defer></script><script src="polyfills.f761e5b6c815c8efe4dc.js" defer></script><script src="main.65e5ca7941c922b70ea5.js" defer></script></body>
+  </html>
