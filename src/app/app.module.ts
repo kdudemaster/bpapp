@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainComponent } from './main/main.component';
 import { ReqsComponent } from './reqs/reqs.component';
+import { ReqsLogComponent } from './reqs-log/reqs-log.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    ReqsComponent
+    ReqsComponent,
+    ReqsLogComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

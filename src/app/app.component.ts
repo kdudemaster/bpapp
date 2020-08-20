@@ -38,11 +38,6 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    var newUser = localStorage.getItem('newUser');
-    console.log(newUser);
-    if(localStorage.getItem("newUser") == null){
-      document.getElementById("launchModal").click()
 
-    }
   }
 }

@@ -1,0 +1,7 @@
+<ul class="list-group" *ngFor="let request of requests">
+<li class="list-group-item">
+  <span class="badge badge-primary float-right">{{request.value}}</span>
+  <h5>{{ request.requester }}</h5>
+  {{ request.title }}
+</li>
+</ul>
