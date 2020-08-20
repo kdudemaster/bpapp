@@ -22,16 +22,19 @@ myProperty = 'this write in script';
     console.log("main")
     var t = this;
 
+    //@ts-ignore
     db.collection("teams").doc("Jonathan")
     .onSnapshot(function(doc) {
         t.jScore = doc.data().score;
     });
 
+    //@ts-ignore
     db.collection("teams").doc("Bachelors")
     .onSnapshot(function(doc) {
         t.bScore = doc.data().score;
     });
 
+    //@ts-ignore
     db.collection("challenges")
     .onSnapshot(function(querySnapshot) {
         t.challenges = [];
@@ -69,12 +72,14 @@ myProperty = 'this write in script';
   sendRequest(data) {
     var fullData = data;
     fullData.requester = localStorage.getItem("name");
+    //@ts-ignore
     db.collection("requests").add(data);
 
     /*db.collection("challenges").doc(data.id).update({
       attempts: data.attempts-1;
     });*/
 
+    //@ts-ignore
     var chal = db.collection("challenges").doc(data.chalId);
 
     // Set the "capital" field of the city 'DC'

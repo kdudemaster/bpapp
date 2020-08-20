@@ -12,6 +12,7 @@ export class ReqsLogComponent implements OnInit {
   constructor() {
     var t = this;
     var r = [];
+    //@ts-ignore
     db.collection("requestsLog")
     .onSnapshot(function(querySnapshot) {
       t.requests = [];
@@ -28,6 +29,7 @@ export class ReqsLogComponent implements OnInit {
 
   acceptReq(data){
     //delete request
+    //@ts-ignore
     db.collection("requests").doc(data.id).delete();
 
     var storyRef = null;
@@ -45,17 +47,21 @@ export class ReqsLogComponent implements OnInit {
     console.log(requester == "Jonathan")
 
     if(requester == "Jonathan"){
+      //@ts-ignore
       this.storyRef = db.collection('teams').doc('Jonathan');
       mult = 3;
     }
     else{
+      //@ts-ignore
       this.storyRef = db.collection('teams').doc('Bachelors');
       mult = 1;
     }
     //increment counter
+    //@ts-ignore
     const increment = firebase.firestore.FieldValue.increment(data.value * mult);
 
     // Update read count
+    //@ts-ignore
     this.storyRef.update({ score: increment });
 
     console.log(data);
@@ -63,11 +69,14 @@ export class ReqsLogComponent implements OnInit {
 
   denyReq(data){
     //increment original counter
+    //@ts-ignore
     const increment = firebase.firestore.FieldValue.increment(1);
+    //@ts-ignore
     const storyRef = db.collection('challenges').doc(data.chalId);
     storyRef.update({ attempts: increment });
 
     //delete request
+    //@ts-ignore
     db.collection("requests").doc(data.id).delete();
     console.log(data);
   }
