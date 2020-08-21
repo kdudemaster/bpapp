@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 import { ReqsComponent } from './reqs/reqs.component';
 import { ReqsLogComponent } from './reqs-log/reqs-log.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ReqCustomComponent } from './req-custom/req-custom.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MainComponent,
     ReqsComponent,
     ReqsLogComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ReqCustomComponent
   ],
   imports: [
     BrowserModule,
