@@ -43,10 +43,10 @@ export class ReqsComponent implements OnInit {
     //console.log(jon)
     //console.log(requester.localeCompare(jon))
 
-    console.log("comp")
-    console.log(requester)
-    console.log(jon)
-    console.log(requester == "Jonathan")
+    //console.log("comp")
+    //console.log(requester)
+    //console.log(jon)
+    //console.log(requester == "Jonathan")
 
     if(requester == "Jonathan"){
       //@ts-ignore
@@ -71,11 +71,13 @@ export class ReqsComponent implements OnInit {
 
   denyReq(data){
     //increment original counter
-    //@ts-ignore
-    const increment = firebase.firestore.FieldValue.increment(1);
-    //@ts-ignore
-    const storyRef = db.collection('challenges').doc(data.chalId);
-    storyRef.update({ attempts: increment });
+    if(typeof data.chalId != 'undefined'){
+      //@ts-ignore
+      const increment = firebase.firestore.FieldValue.increment(1);
+      //@ts-ignore
+      const storyRef = db.collection('challenges').doc(data.chalId);
+      storyRef.update({ attempts: increment });
+    }
 
     //delete request
     //@ts-ignore

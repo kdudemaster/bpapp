@@ -32,12 +32,11 @@ export class AppComponent implements OnInit{
     document.getElementById("closeModal").click();
     console.log("loopFlag")
     console.log(localStorage.getItem("name"))
-    if(localStorage.getItem("name") == "Pat"){
-      this.loopFlag = true;
-    }
   }
 
   ngOnInit(): void {
-
+    if(localStorage.getItem("name") == "Pat"){
+      this.loopFlag = true;
+    }
   }
 }

@@ -10,7 +10,7 @@ import {  PageNotFoundComponent } from './page-not-found/page-not-found.componen
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'main', component: MainComponent },
-  { path: 'reqPagePOnly', component: ReqsComponent },
+  { path: 'requests', component: ReqsComponent },
   { path: 'requestsLog', component: ReqsLogComponent },
   { path: 'reqCustom', component: ReqCustomComponent },
   { path: '**', component: PageNotFoundComponent }
